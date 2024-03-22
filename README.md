@@ -7,8 +7,12 @@ Autoprice allows for:
 1. Gathering car information from [standvirtual](https://www.standvirtual.com/)
 2. Persistently storing the car data
 3. Plotting and comparing different cars' price against different attributes
+
+https://github.com/mantinhas/autoprice/assets/54488939/b1725302-a87c-489a-83a7-106c7dd81056
+
 ![Example of a Plot](screenshots/volkswagen-golf-VS-seat-ibiza.png)
-![Demo](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjljMzM1YnI1Z2w3bXZva28zYmM1Mm1wM3ZucGY0N3Z6ZnJ1NXZqciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/62ErAWpxtLfBzHdXQd/giphy.gif)
+
+
 
 ## Motives
 
