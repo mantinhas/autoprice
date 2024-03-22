@@ -13,8 +13,8 @@ Autoprice allows for:
 
 I initially developed this project sometime around 2021, in order to:
 
-+ Study the $2^nd$ hand car market in Portugal
-+ Make an informed decision for when I bought my $1^st$ car
++ Study the $2^{nd}$ hand car market in Portugal
++ Make an informed decision for when I bought my $1^{st}$ car
 + Gain experience and dexterity web scraping
 
 This week I decided to update my old code, _dockerize_ it and publish it online
