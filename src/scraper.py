@@ -1,11 +1,14 @@
-from selenium.webdriver.common.by import By
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 from car_classes import CarList, Car
 
 PATH = "/sbin/geckodriver"
+TIMEOUT = 10
 
 def scrape(brand, model, headless, pages):
     options = Options()
@@ -25,7 +28,17 @@ def scrape(brand, model, headless, pages):
 
     for page in range(1,pages+1):
         browser.get(link+str(page))
-        time.sleep(0.4)
+
+        # Wait for the page to load
+        try:
+            WebDriverWait(browser, TIMEOUT).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, '[data-parameter=\'mileage\']'))
+            )
+        except:
+            print(f"Timeout exceeded after {TIMEOUT} seconds. Exiting...")
+            browser.quit()
+            return
+
         mileages.extend([ int(e.text[:-3].replace(' ','')) for e in\
                 browser.find_elements(By.CSS_SELECTOR,'[data-parameter=\'mileage\']')])
         years.extend( [ int(e.text) for e in\
