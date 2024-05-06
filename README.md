@@ -4,8 +4,8 @@
 
 Autoprice allows for:
 
-1. Gathering car information from [standvirtual](https://www.standvirtual.com/)
-2. Persistently storing the car data
+1. Gathering car listings from [standvirtual](https://www.standvirtual.com/)
+2. Persistently storing the car listings data
 3. Plotting and comparing different cars' price against different attributes
 
 https://github.com/mantinhas/autoprice/assets/54488939/b1725302-a87c-489a-83a7-106c7dd81056
